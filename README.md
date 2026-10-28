@@ -100,11 +100,11 @@ Cinco projetos que simulam a operação de uma empresa fictícia, com dados sint
 <p align="center">
   <img 
     height="180em" 
-    src="https://github-readme-stats.vercel.app/api?username=diegomichelsen&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=diegomichelsen&theme=tokyonight"
   />
   <img 
     height="180em" 
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegomichelsen&layout=compact&theme=tokyonight&langs_count=8"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=diegomichelsen&theme=tokyonight"
   />
 </p>
 
