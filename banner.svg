@@ -1,64 +1,134 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="Diego Michelsen, automação e integrações de sistemas">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 380" width="1280" height="380" role="img" aria-label="Diego Michelsen, automação e integrações de sistemas">
   <defs>
-    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.2" fill="#2A3A55"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1424"/>
+      <stop offset="1" stop-color="#0F1E36"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.74" cy="0.5" r="0.42">
+      <stop offset="0" stop-color="#1D4E73" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1D4E73" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edgeTop" x1="0" x2="1">
+      <stop offset="0" stop-color="#5EC8E5" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#5EC8E5" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#5EC8E5" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#24385A"/>
     </pattern>
     <linearGradient id="fade" x1="0" x2="1">
-      <stop offset="0.38" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="0.62" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.7" stop-color="#fff" stop-opacity="1"/>
     </linearGradient>
-    <mask id="gridMask"><rect width="1280" height="320" fill="url(#fade)"/></mask>
-    <path id="routeA" d="M816 158 C840 158 838 100 862 100 L1116 100 C1134 100 1132 158 1150 158"/>
-    <path id="routeB" d="M816 158 C840 158 838 216 862 216 L1116 216 C1134 216 1132 158 1150 158"/>
+    <mask id="gridMask"><rect width="1280" height="380" fill="url(#fade)"/></mask>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <clipPath id="frame"><rect width="1280" height="380" rx="16"/></clipPath>
     <style>
-      .name  { font: 700 56px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E8EEF6; letter-spacing: -1px; }
-      .role  { font: 500 23px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #8FD3EC; }
-      .pitch { font: 400 18px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #7F93B0; }
-      .node  { fill: #16233A; stroke: #2E4060; stroke-width: 1.5; }
-      .label { font: 600 15px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #D3DEEB; }
-      .edge  { fill: none; stroke: #3A5274; stroke-width: 2; }
-      .port  { fill: #0F1B2D; stroke: #5EC8E5; stroke-width: 1.5; }
-      @media (prefers-reduced-motion: reduce) { .pulse { display: none; } }
+      .name   { font: 700 60px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #EEF3F9; letter-spacing: -1.5px; }
+      .role   { font: 600 22px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #8FD3EC; }
+      .pitch  { font: 400 17px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #8296B3; }
+      .chip   { fill: #12223A; stroke: #26405F; stroke-width: 1; }
+      .chipT  { font: 600 13px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #C9D6E6; }
+      .chipN  { font: 700 13px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #F2B84B; }
+      .node   { fill: #111F35; stroke: #2B4263; stroke-width: 1.4; }
+      .nTitle { font: 600 14px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E2EAF4; }
+      .nSub   { font: 400 11px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #7186A4; }
+      .iconBg { fill: #17304D; }
+      .icon   { fill: none; stroke: #8FD3EC; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .edge   { fill: none; stroke: #2A4466; stroke-width: 1.6; }
+      .port   { fill: #0A1424; stroke: #5EC8E5; stroke-width: 1.4; }
+      .status { font: 500 12.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #9FB2CB; }
+      .comet  { fill: none; stroke: #8FE3FF; stroke-width: 2.6; stroke-linecap: round;
+                stroke-dasharray: 9 91; stroke-dashoffset: 9; animation: travel 4.2s linear infinite; }
+      .cometGlow { stroke: #5EC8E5; stroke-width: 8; opacity: .45; filter: url(#soft); }
+      @keyframes travel { 0% { stroke-dashoffset: 9; } 80% { stroke-dashoffset: -91; } 100% { stroke-dashoffset: -91; } }
+      .lit { animation: lit 4.2s ease-out infinite; }
+      @keyframes lit { 0% { stroke: #2B4263; } 4% { stroke: #8FE3FF; } 22% { stroke: #2B4263; } 100% { stroke: #2B4263; } }
+      .d1 { animation-delay: 0s; }   .d2 { animation-delay: .9s; }
+      .d3 { animation-delay: 2.0s; } .d4 { animation-delay: 3.25s; }
+      .done { opacity: 0; animation: done 4.2s ease-out infinite; }
+      @keyframes done { 0%, 76% { opacity: 0; } 82%, 96% { opacity: 1; } 100% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) {
+        .comet, .lit, .done { animation: none; }
+        .comet { display: none; }
+        .done { opacity: 1; }
+      }
     </style>
   </defs>
-  <rect width="1280" height="320" rx="14" fill="#0F1B2D"/>
-  <rect width="1280" height="320" fill="url(#dots)" mask="url(#gridMask)"/>
-  <text x="64" y="146" class="name">Diego Michelsen</text>
-  <text x="66" y="190" class="role">Automação e integrações de sistemas</text>
-  <text x="66" y="228" class="pitch">Conecto sistemas, dados e IA para tirar o trabalho</text>
-  <text x="66" y="252" class="pitch">manual da operação.</text>
-  <path class="edge" d="M816 158 C840 158 838 100 862 100"/>
-  <path class="edge" d="M816 158 C840 158 838 216 862 216"/>
-  <path class="edge" d="M966 100 L1012 100"/>
-  <path class="edge" d="M966 216 L1012 216"/>
-  <path class="edge" d="M1116 100 C1134 100 1132 158 1150 158"/>
-  <path class="edge" d="M1116 216 C1134 216 1132 158 1150 158"/>
-  <circle class="pulse" r="4.5" fill="#F2B84B">
-    <animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#routeA"/></animateMotion>
-  </circle>
-  <circle class="pulse" r="4.5" fill="#F2B84B">
-    <animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite"><mpath href="#routeB"/></animateMotion>
-  </circle>
-  <g>
-    <rect class="node" x="712" y="138" width="104" height="40" rx="9"/>
-    <text class="label" x="764" y="163" text-anchor="middle">Webhook</text>
-    <rect class="node" x="862" y="80" width="104" height="40" rx="9"/>
-    <text class="label" x="914" y="105" text-anchor="middle">n8n</text>
-    <rect class="node" x="862" y="196" width="104" height="40" rx="9"/>
-    <text class="label" x="914" y="221" text-anchor="middle">Python</text>
-    <rect class="node" x="1012" y="80" width="104" height="40" rx="9"/>
-    <text class="label" x="1064" y="105" text-anchor="middle">BigQuery</text>
-    <rect class="node" x="1012" y="196" width="104" height="40" rx="9"/>
-    <text class="label" x="1064" y="221" text-anchor="middle">LLM</text>
-    <rect class="node" x="1150" y="138" width="96" height="40" rx="9" style="stroke:#5EC8E5"/>
-    <text class="label" x="1198" y="163" text-anchor="middle">Slack</text>
-  </g>
-  <g>
-    <circle class="port" cx="816" cy="158" r="4"/>
-    <circle class="port" cx="862" cy="100" r="4"/><circle class="port" cx="966" cy="100" r="4"/>
-    <circle class="port" cx="862" cy="216" r="4"/><circle class="port" cx="966" cy="216" r="4"/>
-    <circle class="port" cx="1012" cy="100" r="4"/><circle class="port" cx="1116" cy="100" r="4"/>
-    <circle class="port" cx="1012" cy="216" r="4"/><circle class="port" cx="1116" cy="216" r="4"/>
-    <circle class="port" cx="1150" cy="158" r="4"/>
+  <g clip-path="url(#frame)">
+    <rect width="1280" height="380" fill="url(#bg)"/>
+    <rect width="1280" height="380" fill="url(#glow)"/>
+    <rect width="1280" height="380" fill="url(#dots)" mask="url(#gridMask)"/>
+    <rect x="0" y="0" width="1280" height="1.2" fill="url(#edgeTop)"/>
+    <text x="64" y="152" class="name">Diego Michelsen</text>
+    <text x="66" y="194" class="role">Automação e integrações de sistemas</text>
+    <text x="66" y="232" class="pitch">Conecto sistemas, dados e IA para eliminar</text>
+    <text x="66" y="256" class="pitch">trabalho manual da operação.</text>
+    <g>
+      <rect class="chip" x="64" y="290" width="215" height="34" rx="17"/>
+      <text x="82" y="312" class="chipN">10+</text>
+      <text x="117" y="312" class="chipT">anos em Operações</text>
+      <rect class="chip" x="291" y="290" width="210" height="34" rx="17"/>
+      <text x="309" y="312" class="chipN">~90%</text>
+      <text x="357" y="312" class="chipT">QA automatizado</text>
+      <rect class="chip" x="513" y="290" width="112" height="34" rx="17"/>
+      <text x="531" y="312" class="chipN">5</text>
+      <text x="546" y="312" class="chipT">projetos</text>
+    </g>
+    <path class="edge" d="M796 197 C809 197 809 135 822 135"/>
+    <path class="edge" d="M796 197 C809 197 809 259 822 259"/>
+    <path class="edge" d="M942 135 L968 135"/>
+    <path class="edge" d="M942 259 L968 259"/>
+    <path class="edge" d="M1088 135 C1101 135 1101 197 1114 197"/>
+    <path class="edge" d="M1088 259 C1101 259 1101 197 1114 197"/>
+    <path d="M796 197 C809 197 809 135 822 135 L968 135 C1028 135 1028 135 1088 135 C1101 135 1101 197 1114 197" class="comet cometGlow" pathLength="100"/>
+    <path d="M796 197 C809 197 809 259 822 259 L968 259 C1028 259 1028 259 1088 259 C1101 259 1101 197 1114 197" class="comet cometGlow" pathLength="100"/>
+    <path d="M796 197 C809 197 809 135 822 135 L968 135 C1028 135 1028 135 1088 135 C1101 135 1101 197 1114 197" class="comet" pathLength="100"/>
+    <path d="M796 197 C809 197 809 259 822 259 L968 259 C1028 259 1028 259 1088 259 C1101 259 1101 197 1114 197" class="comet" pathLength="100"/>
+    <rect class="node lit d1" x="676" y="172" width="120" height="50" rx="11"/>
+    <rect class="iconBg" x="686" y="185" width="24" height="24" rx="7"/>
+    <path class="icon" d="M700 189 L694 198 L699 198 L696 205 L703 195 L698 195 Z"/>
+    <text x="718" y="194" class="nTitle">Webhook</text>
+    <text x="718" y="210" class="nSub">gatilho</text>
+    <rect class="node lit d2" x="822" y="110" width="120" height="50" rx="11"/>
+    <rect class="iconBg" x="832" y="123" width="24" height="24" rx="7"/>
+    <circle class="icon" cx="838.5" cy="135" r="2.6"/><circle class="icon" cx="849.5" cy="129" r="2.6"/><circle class="icon" cx="849.5" cy="141" r="2.6"/>
+    <path class="icon" d="M841 134 L847 130 M841 136 L847 140"/>
+    <text x="864" y="132" class="nTitle">n8n</text>
+    <text x="864" y="148" class="nSub">orquestração</text>
+    <rect class="node lit d2" x="822" y="234" width="120" height="50" rx="11"/>
+    <rect class="iconBg" x="832" y="247" width="24" height="24" rx="7"/>
+    <path class="icon" d="M841 252 C838 252 839 258 836.5 259 C839 260 838 266 841 266 M847 252 C850 252 849 258 851.5 259 C849 260 850 266 847 266"/>
+    <text x="864" y="256" class="nTitle">Python</text>
+    <text x="864" y="272" class="nSub">regras</text>
+    <rect class="node lit d3" x="968" y="110" width="120" height="50" rx="11"/>
+    <rect class="iconBg" x="978" y="123" width="24" height="24" rx="7"/>
+    <ellipse class="icon" cx="990" cy="129.5" rx="6" ry="2.4"/>
+    <path class="icon" d="M984 129.5 V140.5 C984 143.7 996 143.7 996 140.5 V129.5 M984 135 C984 138.2 996 138.2 996 135"/>
+    <text x="1010" y="132" class="nTitle">BigQuery</text>
+    <text x="1010" y="148" class="nSub">dados</text>
+    <rect class="node lit d3" x="968" y="234" width="120" height="50" rx="11"/>
+    <rect class="iconBg" x="978" y="247" width="24" height="24" rx="7"/>
+    <path class="icon" d="M990 251.5 C991 256.5 992.5 258 997.5 259 C992.5 260 991 261.5 990 266.5 C989 261.5 987.5 260 982.5 259 C987.5 258 989 256.5 990 251.5 Z"/>
+    <text x="1010" y="256" class="nTitle">LLM</text>
+    <text x="1010" y="272" class="nSub">análise</text>
+    <rect class="node lit d4" x="1114" y="172" width="120" height="50" rx="11"/>
+    <rect class="iconBg" x="1124" y="185" width="24" height="24" rx="7"/>
+    <path class="icon" d="M1131 202 V196.5 C1131 192.5 1133.5 190 1136 190 C1138.5 190 1141 192.5 1141 196.5 V202 L1142.5 204 H1129.5 Z M1134 206.5 H1138"/>
+    <text x="1156" y="194" class="nTitle">Slack</text>
+    <text x="1156" y="210" class="nSub">alerta</text>
+    <circle class="port" cx="796" cy="197" r="3.6"/>
+    <circle class="port" cx="822" cy="135" r="3.6"/><circle class="port" cx="942" cy="135" r="3.6"/>
+    <circle class="port" cx="822" cy="259" r="3.6"/><circle class="port" cx="942" cy="259" r="3.6"/>
+    <circle class="port" cx="968" cy="135" r="3.6"/><circle class="port" cx="1088" cy="135" r="3.6"/>
+    <circle class="port" cx="968" cy="259" r="3.6"/><circle class="port" cx="1088" cy="259" r="3.6"/>
+    <circle class="port" cx="1114" cy="197" r="3.6"/>
+    <g class="done">
+      <rect x="1004" y="316" width="230" height="30" rx="15" fill="#0F2A2A" stroke="#1F5A4E"/>
+      <circle cx="1022" cy="331" r="4" fill="#4ADE9B"/>
+      <text x="1034" y="335.5" class="status">6 etapas concluídas em 1,4 s</text>
+    </g>
   </g>
 </svg>
