@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="Diego Michelsen, automação e integrações de sistemas">
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#2A3A55"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset="0.38" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.62" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="gridMask"><rect width="1280" height="320" fill="url(#fade)"/></mask>
+    <path id="routeA" d="M816 158 C840 158 838 100 862 100 L1116 100 C1134 100 1132 158 1150 158"/>
+    <path id="routeB" d="M816 158 C840 158 838 216 862 216 L1116 216 C1134 216 1132 158 1150 158"/>
+    <style>
+      .name  { font: 700 56px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E8EEF6; letter-spacing: -1px; }
+      .role  { font: 500 23px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #8FD3EC; }
+      .pitch { font: 400 18px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #7F93B0; }
+      .node  { fill: #16233A; stroke: #2E4060; stroke-width: 1.5; }
+      .label { font: 600 15px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #D3DEEB; }
+      .edge  { fill: none; stroke: #3A5274; stroke-width: 2; }
+      .port  { fill: #0F1B2D; stroke: #5EC8E5; stroke-width: 1.5; }
+      @media (prefers-reduced-motion: reduce) { .pulse { display: none; } }
+    </style>
+  </defs>
+  <rect width="1280" height="320" rx="14" fill="#0F1B2D"/>
+  <rect width="1280" height="320" fill="url(#dots)" mask="url(#gridMask)"/>
+  <text x="64" y="146" class="name">Diego Michelsen</text>
+  <text x="66" y="190" class="role">Automação e integrações de sistemas</text>
+  <text x="66" y="228" class="pitch">Conecto sistemas, dados e IA para tirar o trabalho</text>
+  <text x="66" y="252" class="pitch">manual da operação.</text>
+  <path class="edge" d="M816 158 C840 158 838 100 862 100"/>
+  <path class="edge" d="M816 158 C840 158 838 216 862 216"/>
+  <path class="edge" d="M966 100 L1012 100"/>
+  <path class="edge" d="M966 216 L1012 216"/>
+  <path class="edge" d="M1116 100 C1134 100 1132 158 1150 158"/>
+  <path class="edge" d="M1116 216 C1134 216 1132 158 1150 158"/>
+  <circle class="pulse" r="4.5" fill="#F2B84B">
+    <animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#routeA"/></animateMotion>
+  </circle>
+  <circle class="pulse" r="4.5" fill="#F2B84B">
+    <animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite"><mpath href="#routeB"/></animateMotion>
+  </circle>
+  <g>
+    <rect class="node" x="712" y="138" width="104" height="40" rx="9"/>
+    <text class="label" x="764" y="163" text-anchor="middle">Webhook</text>
+    <rect class="node" x="862" y="80" width="104" height="40" rx="9"/>
+    <text class="label" x="914" y="105" text-anchor="middle">n8n</text>
+    <rect class="node" x="862" y="196" width="104" height="40" rx="9"/>
+    <text class="label" x="914" y="221" text-anchor="middle">Python</text>
+    <rect class="node" x="1012" y="80" width="104" height="40" rx="9"/>
+    <text class="label" x="1064" y="105" text-anchor="middle">BigQuery</text>
+    <rect class="node" x="1012" y="196" width="104" height="40" rx="9"/>
+    <text class="label" x="1064" y="221" text-anchor="middle">LLM</text>
+    <rect class="node" x="1150" y="138" width="96" height="40" rx="9" style="stroke:#5EC8E5"/>
+    <text class="label" x="1198" y="163" text-anchor="middle">Slack</text>
+  </g>
+  <g>
+    <circle class="port" cx="816" cy="158" r="4"/>
+    <circle class="port" cx="862" cy="100" r="4"/><circle class="port" cx="966" cy="100" r="4"/>
+    <circle class="port" cx="862" cy="216" r="4"/><circle class="port" cx="966" cy="216" r="4"/>
+    <circle class="port" cx="1012" cy="100" r="4"/><circle class="port" cx="1116" cy="100" r="4"/>
+    <circle class="port" cx="1012" cy="216" r="4"/><circle class="port" cx="1116" cy="216" r="4"/>
+    <circle class="port" cx="1150" cy="158" r="4"/>
+  </g>
+</svg>
