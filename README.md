@@ -4,13 +4,9 @@
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/diegomichelsen">
-  <img src="https://img.shields.io/badge/LinkedIn-diegomichelsen-16233A?style=for-the-badge&logo=linkedin&logoColor=5EC8E5" />
-</a>
-<a href="mailto:diegorodriguesmichelsen@gmail.com">
-  <img src="https://img.shields.io/badge/E--mail-Fale%20comigo-16233A?style=for-the-badge&logo=gmail&logoColor=5EC8E5" />
-</a>
-<img src="https://img.shields.io/badge/Florian%C3%B3polis-SC-16233A?style=for-the-badge&logo=googlemaps&logoColor=5EC8E5" />
+<a href="https://www.linkedin.com/in/diegomichelsen"><img src="https://img.shields.io/badge/LinkedIn-16233A?style=for-the-badge&logoColor=5EC8E5" /></a>
+<a href="mailto:diegorodriguesmichelsen@gmail.com"><img src="https://img.shields.io/badge/E--mail-16233A?style=for-the-badge&logoColor=5EC8E5&logo=gmail" /></a>
+<img src="https://img.shields.io/badge/Florian%C3%B3polis%2C%20SC-16233A?style=for-the-badge&logoColor=5EC8E5&logo=googlemaps" />
 
 </div>
 
@@ -42,28 +38,24 @@ buscando:      Automação, Integrações, AI Ops, Dados
 ## Stack
 
 <div align="center">
-
 <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,docker,gcp,git,github,vscode,html,css,js&theme=dark&perline=11" />
-
 <br/><br/>
-
-<img src="https://img.shields.io/badge/n8n-16233A?style=for-the-badge&logo=n8n&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Make-16233A?style=for-the-badge&logo=make&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/REST%20APIs-16233A?style=for-the-badge&logo=fastapi&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Webhooks-16233A?style=for-the-badge&logo=webauthn&logoColor=5EC8E5" />
+<img src="https://img.shields.io/badge/n8n-16233A?style=for-the-badge&logoColor=5EC8E5&logo=n8n" />
+<img src="https://img.shields.io/badge/Make-16233A?style=for-the-badge&logoColor=5EC8E5&logo=make" />
+<img src="https://img.shields.io/badge/REST%20APIs-16233A?style=for-the-badge&logoColor=5EC8E5&logo=fastapi" />
+<img src="https://img.shields.io/badge/Webhooks-16233A?style=for-the-badge&logoColor=5EC8E5&logo=webauthn" />
 <br/>
-<img src="https://img.shields.io/badge/BigQuery-16233A?style=for-the-badge&logo=googlebigquery&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/SQL-16233A?style=for-the-badge&logo=postgresql&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Supabase-16233A?style=for-the-badge&logo=supabase&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Power%20BI-16233A?style=for-the-badge&logo=powerbi&logoColor=5EC8E5" />
+<img src="https://img.shields.io/badge/BigQuery-16233A?style=for-the-badge&logoColor=5EC8E5&logo=googlebigquery" />
+<img src="https://img.shields.io/badge/SQL-16233A?style=for-the-badge&logoColor=5EC8E5&logo=postgresql" />
+<img src="https://img.shields.io/badge/Supabase-16233A?style=for-the-badge&logoColor=5EC8E5&logo=supabase" />
+<img src="https://img.shields.io/badge/Power%20BI-16233A?style=for-the-badge&logoColor=5EC8E5" />
 <br/>
-<img src="https://img.shields.io/badge/OpenAI%20API-16233A?style=for-the-badge&logo=openai&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Claude-16233A?style=for-the-badge&logo=anthropic&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Intercom-16233A?style=for-the-badge&logo=intercom&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Slack-16233A?style=for-the-badge&logo=slack&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Jira-16233A?style=for-the-badge&logo=jira&logoColor=5EC8E5" />
-<img src="https://img.shields.io/badge/Confluence-16233A?style=for-the-badge&logo=confluence&logoColor=5EC8E5" />
-
+<img src="https://img.shields.io/badge/OpenAI%20API-16233A?style=for-the-badge&logoColor=5EC8E5" />
+<img src="https://img.shields.io/badge/Claude-16233A?style=for-the-badge&logoColor=5EC8E5&logo=anthropic" />
+<img src="https://img.shields.io/badge/Intercom-16233A?style=for-the-badge&logoColor=5EC8E5&logo=intercom" />
+<img src="https://img.shields.io/badge/Slack-16233A?style=for-the-badge&logoColor=5EC8E5" />
+<img src="https://img.shields.io/badge/Jira-16233A?style=for-the-badge&logoColor=5EC8E5&logo=jira" />
+<img src="https://img.shields.io/badge/Confluence-16233A?style=for-the-badge&logoColor=5EC8E5&logo=confluence" />
 </div>
 
 ## Portfólio em construção
@@ -72,11 +64,11 @@ Cinco projetos que simulam a operação de uma empresa fictícia, com dados sint
 
 | Projeto | O que resolve | Stack | Status |
 |---|---|---|---|
-| **AI Support Intelligence** | Auditoria de atendimentos com IA, scoring, CSAT justificado e contestações | Python, FastAPI, PostgreSQL, n8n, Docker | 🟡 Em desenvolvimento |
-| **LeadFlow AI** | Captação, deduplicação e qualificação de leads com integração a CRM | n8n, Python, Webhooks | ⚪ Planejado |
-| **Finance Intelligence** | Conciliação financeira e detecção de divergências | Python, SQL, PostgreSQL | ⚪ Planejado |
-| **Operational Intelligence Hub** | KPIs de todas as áreas em uma interface única | HTML, JS, Python, SQL | ⚪ Planejado |
-| **Automation Control Tower** | Observabilidade das automações: falhas, retentativas e incidentes | FastAPI, PostgreSQL, n8n | ⚪ Planejado |
+| [**AI Support Intelligence**](https://github.com/diegomichelsen/ai-support-intelligence) | Auditoria de atendimentos com IA, scoring, CSAT justificado e contestações | Python, FastAPI, PostgreSQL, n8n, Docker | 🟡 Em desenvolvimento |
+| [**LeadFlow AI**](https://github.com/diegomichelsen/leadflow-ai) | Captação, deduplicação e qualificação de leads com integração a CRM | n8n, Python, Webhooks | ⚪ Planejado |
+| [**Finance Intelligence**](https://github.com/diegomichelsen/finance-intelligence) | Conciliação financeira e detecção de divergências | Python, SQL, PostgreSQL | ⚪ Planejado |
+| [**Operational Intelligence Hub**](https://github.com/diegomichelsen/enterprise-operational-intelligence-hub) | KPIs de todas as áreas em uma interface única | HTML, JS, Python, SQL | ⚪ Planejado |
+| [**Automation Control Tower**](https://github.com/diegomichelsen/automation-control-tower) | Observabilidade das automações: falhas, retentativas e incidentes | FastAPI, PostgreSQL, n8n | ⚪ Planejado |
 
 ## Certificações
 
